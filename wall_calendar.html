@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Wall Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scene" id="scene">
+  <button class="dark-mode-toggle" id="darkModeBtn">Dark Mode</button>
+  <div class="wall-texture"></div>
+  <div class="nail" id="nail"></div>
+
+  <div class="calendar" id="cal">
+
+    <div class="spiral-strip" id="strip"></div>
+
+    <div id="pageWrapper" style="position:relative; transform-origin: top center;">
+      <div class="image-panel" id="imgPanel">
+        <img class="img-bg" id="heroImg" src="" alt="" />
+        <div class="img-overlay"></div>
+        <div class="chevron-wrap">
+          <svg viewBox="0 0 700 50" preserveAspectRatio="none" style="width:100%;display:block;height:36px">
+            <polygon points="0,50 350,12 700,50" fill="#1a6ec4" />
+            <polygon points="0,50 0,36 350,0 700,36 700,50" fill="#2d84e8" opacity="0.55" />
+          </svg>
+        </div>
+        <div class="month-badge">
+          <div class="month-year-label" id="yearLabel">2026</div>
+          <div class="month-name-label" id="monthLabel">APRIL</div>
+        </div>
+        <div class="theme-bar" id="themeBar"></div>
+      </div>
+
+      <div class="calendar-body">
+        <div class="calendar-main">
+          <div class="nav-row">
+            <button class="nav-btn" id="prevBtn">&#8249;</button>
+            <span class="month-title" id="navTitle"></span>
+            <button class="nav-btn" id="nextBtn">&#8250;</button>
+          </div>
+
+        <div class="day-headers" id="dayHeaders">
+          <div class="wk-label">WK</div>
+          <div class="dh">Mon</div>
+          <div class="dh">Tue</div>
+          <div class="dh">Wed</div>
+          <div class="dh">Thu</div>
+          <div class="dh wknd">Fri</div>
+          <div class="dh wknd">Sat</div>
+          <div class="dh wknd">Sun</div>
+        </div>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="legend-row" id="legendRow"></div>
+        </div> <!-- End calendar-main -->
+
+        <div class="calendar-sidebar">
+          <div class="divider"></div>
+
+          <div class="notes-section">
+          <div class="notes-header">
+            <span class="notes-label">Notes</span>
+            <span class="range-label-text" id="rangeLabel">Click a day to select</span>
+          </div>
+          <div class="notes-inner">
+            <div class="note-lines" id="noteLines"></div>
+            <textarea class="note-input" id="noteInput" rows="4"
+              placeholder="Jot down notes for this date..."></textarea>
+          </div>
+          <button class="save-btn" id="saveBtn">Save Note</button>
+        </div>
+
+          <div class="quote-section" id="quoteContainer">
+            <div class="quote-text" id="quoteText"></div>
+          </div>
+        </div> <!-- End calendar-sidebar -->
+      </div>
+
+      <div class="page-flip" id="flipBtn" title="Next month"></div>
+    </div>
+  </div>
+</div>
+
+<div id="calendarTooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
