@@ -38,13 +38,13 @@ Because this project is strictly static assets containing no compile requirement
 
 ### Method 1: Direct File Path
 You can easily jump into interactive mode just by opening the master index frame.
-1. Right click `wall_calendar_interactive.html` within your directory.
+1. Right click `index.html` within your directory.
 2. Select **Open With...**
 3. Choose modern browsers (Chrome, Edge, Firefox).
 
 ### Method 2: Live Server Extension (Recommended)
 If you utilize VS Code, utilizing a localhost bridge tracks live CSS changes dynamically instead of requiring a manual refresh loop.
 1. Install the `Live Server` plugin through the VS Code Extensions tab.
-2. Open `wall_calendar_interactive.html`.
+2. Open `index.html`.
 3. Select `Go Live` dynamically from the bottom right editor corner. 
 4. The calendar perfectly launches to `http://127.0.0.1:5500/`.
